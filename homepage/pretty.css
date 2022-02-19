@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #7373c5;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: var(--main);
+  color: white;
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+}
+
+header > * {
+  display: inline-block;
+}
+
+nav {
+  margin-left: auto;
+}
+
+ul > li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 1rem;
+}
+
+ul a {
+  text-decoration: none;
+  color: white;
+
+  position: relative;
+}
+
+ul a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -3px;
+
+  width: 100%;
+  height: 2px;
+  background-color: white;
+
+  transition: 200ms;
+  transform: scaleX(0);
+}
+
+ul a:hover::after {
+  transform: scaleX(1);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+#aboutme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+}
+
+#aboutme > img {
+  max-height: 15rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+#aboutme h1 {
+  background: linear-gradient(170deg, var(--main) 30%, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#aboutme p {
+  background-color: var(--main);
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+#history {
+  background: linear-gradient(var(--main), #d65db1, #ff6f91);
+  color: white;
+  min-height: 60vh;
+  padding: 1rem;
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#history h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 1rem;
+}
+
+.project {
+  color: white;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.project h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.project img {
+  border-radius: 10px;
+  min-width: 20rem;
+  max-width: 100%;
+  height: 12.5rem;
+  max-height: 100%;
+  transition: 200ms;
+}
+
+.project img:hover {
+  filter: brightness(0.5);
+}
+
+#offerings {
+  padding: 2rem;
+  color: var(--main);
+  min-height: 50vh;
+}
+
+.joke {
+  font-size: 0.8rem;
+}
+
+#offerings > h3 {
+  display: inline-block;
+  background-color: var(--main);
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+ol > li {
+  margin-left: 1rem;
+}
